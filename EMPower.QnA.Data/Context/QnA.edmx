@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="QnAModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="FRS_Knowledge">
+          <Key>
+            <PropertyRef Name="RecId" />
+          </Key>
+          <Property Name="FRS_KnowledgeType" Type="varchar" MaxLength="30" />
+          <Property Name="RecId" Type="char" MaxLength="32" Nullable="false" />
+          <Property Name="LastModDateTime" Type="datetime" />
+          <Property Name="LastModBy" Type="nvarchar" MaxLength="200" />
+          <Property Name="CreatedDateTime" Type="datetime" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="200" />
+          <Property Name="OwnerType" Type="varchar" MaxLength="30" />
+          <Property Name="Owner_Valid" Type="varchar" MaxLength="32" />
+          <Property Name="OwnerTeam" Type="nvarchar" MaxLength="100" />
+          <Property Name="OwnerTeam_Valid" Type="varchar" MaxLength="32" />
+          <Property Name="Author" Type="nvarchar" MaxLength="100" />
+          <Property Name="Author_Valid" Type="varchar" MaxLength="32" />
+          <Property Name="Collection" Type="nvarchar" MaxLength="100" />
+          <Property Name="Collection_Valid" Type="varchar" MaxLength="32" />
+          <Property Name="CountFeedback" Type="int" />
+          <Property Name="CountHelpful" Type="int" />
+          <Property Name="CountNotHelpful" Type="int" />
+          <Property Name="CountView" Type="int" />
+          <Property Name="EffectiveDate" Type="datetime" />
+          <Property Name="Environment" Type="nvarchar" MaxLength="200" />
+          <Property Name="Environment_Valid" Type="varchar" MaxLength="32" />
+          <Property Name="Keywords" Type="nvarchar" MaxLength="200" />
+          <Property Name="NextReviewDate" Type="datetime" />
+          <Property Name="OwnerEmail" Type="nvarchar" MaxLength="255" />
+          <Property Name="PublishedDate" Type="datetime" />
+          <Property Name="RetiredDate" Type="datetime" />
+          <Property Name="Status" Type="nvarchar" MaxLength="50" />
+          <Property Name="Status_Valid" Type="varchar" MaxLength="32" />
+          <Property Name="Title" Type="nvarchar" MaxLength="300" />
+          <Property Name="UserRating" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="ExpirationDate" Type="datetime" />
+          <Property Name="IsBusinessApprovalRequired" Type="bit" />
+          <Property Name="IsPresentationApprovalRequired" Type="bit" />
+          <Property Name="IsTechnicalApprovalRequired" Type="bit" />
+          <Property Name="KnowledgeNumber" Type="int" />
+          <Property Name="KnowledgeVersion" Type="smallint" />
+          <Property Name="DisplayText" Type="nvarchar" MaxLength="350" />
+          <Property Name="AttachmentData" Type="varbinary(max)" />
+          <Property Name="AttachmentData_FileType" Type="varchar" MaxLength="10" />
+          <Property Name="AttachmentData_FileName" Type="nvarchar" MaxLength="256" />
+          <Property Name="Category" Type="nvarchar" MaxLength="50" />
+          <Property Name="Category_Valid" Type="varchar" MaxLength="32" />
+          <Property Name="Subcategory" Type="nvarchar" MaxLength="100" />
+          <Property Name="Subcategory_Valid" Type="varchar" MaxLength="32" />
+          <Property Name="ReadOnly" Type="bit" />
+          <Property Name="Owner" Type="nvarchar" MaxLength="200" />
+          <Property Name="SocialTextHeader" Type="ntext" />
+          <Property Name="Details" Type="nvarchar(max)" />
+          <Property Name="Resolution" Type="nvarchar(max)" />
+          <Property Name="OwnerFullName" Type="nvarchar" MaxLength="255" />
+          <Property Name="ReviewDate" Type="datetime" />
+          <Property Name="TodaysDate" Type="datetime" />
+        </EntityType>
+        <EntityContainer Name="QnAModelStoreContainer">
+          <EntitySet Name="FRS_Knowledge" EntityType="Self.FRS_Knowledge" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="QnAModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="FRS_Knowledge">
+          <Key>
+            <PropertyRef Name="RecId" />
+          </Key>
+          <Property Name="FRS_KnowledgeType" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="RecId" Type="String" MaxLength="32" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="LastModDateTime" Type="DateTime" Precision="3" />
+          <Property Name="LastModBy" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedDateTime" Type="DateTime" Precision="3" />
+          <Property Name="CreatedBy" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="OwnerType" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Owner_Valid" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="OwnerTeam" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="OwnerTeam_Valid" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="Author" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Author_Valid" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="Collection" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Collection_Valid" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="CountFeedback" Type="Int32" />
+          <Property Name="CountHelpful" Type="Int32" />
+          <Property Name="CountNotHelpful" Type="Int32" />
+          <Property Name="CountView" Type="Int32" />
+          <Property Name="EffectiveDate" Type="DateTime" Precision="3" />
+          <Property Name="Environment" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Environment_Valid" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="Keywords" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="NextReviewDate" Type="DateTime" Precision="3" />
+          <Property Name="OwnerEmail" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="PublishedDate" Type="DateTime" Precision="3" />
+          <Property Name="RetiredDate" Type="DateTime" Precision="3" />
+          <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Status_Valid" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="Title" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="UserRating" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="ExpirationDate" Type="DateTime" Precision="3" />
+          <Property Name="IsBusinessApprovalRequired" Type="Boolean" />
+          <Property Name="IsPresentationApprovalRequired" Type="Boolean" />
+          <Property Name="IsTechnicalApprovalRequired" Type="Boolean" />
+          <Property Name="KnowledgeNumber" Type="Int32" />
+          <Property Name="KnowledgeVersion" Type="Int16" />
+          <Property Name="DisplayText" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+          <Property Name="AttachmentData" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="AttachmentData_FileType" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="AttachmentData_FileName" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="Category" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Category_Valid" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="Subcategory" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Subcategory_Valid" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="ReadOnly" Type="Boolean" />
+          <Property Name="Owner" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="SocialTextHeader" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Details" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Resolution" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OwnerFullName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ReviewDate" Type="DateTime" Precision="3" />
+          <Property Name="TodaysDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityContainer Name="QnAEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="FRS_Knowledge" EntityType="Self.FRS_Knowledge" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="QnAModelStoreContainer" CdmEntityContainer="QnAEntities">
+          <EntitySetMapping Name="FRS_Knowledge">
+            <EntityTypeMapping TypeName="QnAModel.FRS_Knowledge">
+              <MappingFragment StoreEntitySet="FRS_Knowledge">
+                <ScalarProperty Name="FRS_KnowledgeType" ColumnName="FRS_KnowledgeType" />
+                <ScalarProperty Name="RecId" ColumnName="RecId" />
+                <ScalarProperty Name="LastModDateTime" ColumnName="LastModDateTime" />
+                <ScalarProperty Name="LastModBy" ColumnName="LastModBy" />
+                <ScalarProperty Name="CreatedDateTime" ColumnName="CreatedDateTime" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="OwnerType" ColumnName="OwnerType" />
+                <ScalarProperty Name="Owner_Valid" ColumnName="Owner_Valid" />
+                <ScalarProperty Name="OwnerTeam" ColumnName="OwnerTeam" />
+                <ScalarProperty Name="OwnerTeam_Valid" ColumnName="OwnerTeam_Valid" />
+                <ScalarProperty Name="Author" ColumnName="Author" />
+                <ScalarProperty Name="Author_Valid" ColumnName="Author_Valid" />
+                <ScalarProperty Name="Collection" ColumnName="Collection" />
+                <ScalarProperty Name="Collection_Valid" ColumnName="Collection_Valid" />
+                <ScalarProperty Name="CountFeedback" ColumnName="CountFeedback" />
+                <ScalarProperty Name="CountHelpful" ColumnName="CountHelpful" />
+                <ScalarProperty Name="CountNotHelpful" ColumnName="CountNotHelpful" />
+                <ScalarProperty Name="CountView" ColumnName="CountView" />
+                <ScalarProperty Name="EffectiveDate" ColumnName="EffectiveDate" />
+                <ScalarProperty Name="Environment" ColumnName="Environment" />
+                <ScalarProperty Name="Environment_Valid" ColumnName="Environment_Valid" />
+                <ScalarProperty Name="Keywords" ColumnName="Keywords" />
+                <ScalarProperty Name="NextReviewDate" ColumnName="NextReviewDate" />
+                <ScalarProperty Name="OwnerEmail" ColumnName="OwnerEmail" />
+                <ScalarProperty Name="PublishedDate" ColumnName="PublishedDate" />
+                <ScalarProperty Name="RetiredDate" ColumnName="RetiredDate" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Status_Valid" ColumnName="Status_Valid" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="UserRating" ColumnName="UserRating" />
+                <ScalarProperty Name="ExpirationDate" ColumnName="ExpirationDate" />
+                <ScalarProperty Name="IsBusinessApprovalRequired" ColumnName="IsBusinessApprovalRequired" />
+                <ScalarProperty Name="IsPresentationApprovalRequired" ColumnName="IsPresentationApprovalRequired" />
+                <ScalarProperty Name="IsTechnicalApprovalRequired" ColumnName="IsTechnicalApprovalRequired" />
+                <ScalarProperty Name="KnowledgeNumber" ColumnName="KnowledgeNumber" />
+                <ScalarProperty Name="KnowledgeVersion" ColumnName="KnowledgeVersion" />
+                <ScalarProperty Name="DisplayText" ColumnName="DisplayText" />
+                <ScalarProperty Name="AttachmentData" ColumnName="AttachmentData" />
+                <ScalarProperty Name="AttachmentData_FileType" ColumnName="AttachmentData_FileType" />
+                <ScalarProperty Name="AttachmentData_FileName" ColumnName="AttachmentData_FileName" />
+                <ScalarProperty Name="Category" ColumnName="Category" />
+                <ScalarProperty Name="Category_Valid" ColumnName="Category_Valid" />
+                <ScalarProperty Name="Subcategory" ColumnName="Subcategory" />
+                <ScalarProperty Name="Subcategory_Valid" ColumnName="Subcategory_Valid" />
+                <ScalarProperty Name="ReadOnly" ColumnName="ReadOnly" />
+                <ScalarProperty Name="Owner" ColumnName="Owner" />
+                <ScalarProperty Name="SocialTextHeader" ColumnName="SocialTextHeader" />
+                <ScalarProperty Name="Details" ColumnName="Details" />
+                <ScalarProperty Name="Resolution" ColumnName="Resolution" />
+                <ScalarProperty Name="OwnerFullName" ColumnName="OwnerFullName" />
+                <ScalarProperty Name="ReviewDate" ColumnName="ReviewDate" />
+                <ScalarProperty Name="TodaysDate" ColumnName="TodaysDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
